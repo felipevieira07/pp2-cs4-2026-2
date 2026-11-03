@@ -69,12 +69,14 @@ export function CustomersList() {
  // vazio, neste caso, indica que o useEffect() deverá ser
  // executado apenas uma vez, quando o componente estiver sendo
  // carregado na tela, para chamar fetchData().
- useEffect(() => fetchData(), [])
+ useEffect(() => {
+  fetchData()
+}, [])
 
 
  return (
   <>
-
+   <h2 className="h2 mb-3">Listagem de Clientes</h2>
    <p className="text-secondary">
      Total de clientes: {customers.length}
    </p>
