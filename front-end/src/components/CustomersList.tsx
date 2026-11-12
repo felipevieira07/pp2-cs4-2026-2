@@ -3,11 +3,6 @@ import type { Customer } from '../types/Customer'
 import { Link } from 'react-router'
 
 
-type CustomerListProps = {
- list?: Customer[]
-}
-
-
 export function CustomersList() {
 
   const [customers, setCustomers] = useState<Customer[]>([])

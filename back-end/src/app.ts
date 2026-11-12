@@ -11,8 +11,12 @@ import cors from 'cors'
 
 const app = express()
 
+const allowedOrigins = (
+  process.env.ALLOWED_ORIGINS ?? 'http://localhost:5173'
+).split(',')
+
 app.use(cors({
- origin: process.env.ALLOWED_ORIGINS.split(','),
+  origin: allowedOrigins,
 }))
 
 
